@@ -1,0 +1,45 @@
+// Variables
+// Author: Roy Peckham
+
+// Colors
+$color-font: #222;
+$color-header: #221e1f;
+$color-footer: #F3eFe1; 
+$color-gold: #d4b56e;
+$color-background: #f1f0ea;
+
+$color-white: #FFF;
+/*
+$color-main: #f7a1be;
+    $color-mainL: #ffd9e4;
+$color-contrast: #65c4c8;
+    $color-contrastL: #a8dbdf;
+$color-softG: #e9eeea; //dee3df
+$color-softB: #ebdcc9;
+*/
+
+// Fonts & Typography
+$base-font-size: 16px; //1.6rem !important
+$base-line-height: 1.4;
+
+$font-main: $Playfair;
+$font-menu: $Raleway;
+$font-body: $OpenSans;
+
+// Sizing
+$max-width:1200px;
+$max-content-width: 768px;
+
+// Media Query Ranges - Recommended by Materialize
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
