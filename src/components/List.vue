@@ -1,15 +1,17 @@
 <template>
     <div id="list-page">
-
+        
 
         <!-- list content -->
         <div id="list_page-content" class="clearfix">
             <div id="list_page-main">
                 <article id="list">
-                    <div id="list-date">12.27.2017</div>
-                    <div id="list-title">10 Most Expensive Homes in California</div>
-                    <div id="list-tagline">With the most expensive home topping out at $149,000,000 in 2016, this list of the most expensive homes in California is nothing short of insane.</div>
-                    <div id="list-mainimg"></div>
+                    <div id="list-date">{{list.dc}}</div>
+                    <div id="list-title">{{list.t}}</div>
+                    <div id="list-tagline">{{list.d}}</div>
+                    <div id="list-mainimg">
+                        <img :src="'/src/assets/images/lists/' + list.ui">
+                    </div>
                     <div id="list-article" class="clearfix">
                         <div id="list_article-social">
                             <div id="l_a_s-content"></div>
@@ -24,12 +26,12 @@
                                 </div>
 
                                 <!-- list_item -->
-                                <div class="list_item">
+                                <div v-for="listItem in orderedListItems" class="list_item">
                                     <div class="list_item-meta clearfix">
-                                        <div class="list_item-number">1</div>
+                                        <div class="list_item-number">{{listItem.o}}</div>
                                         <div class="list_item-title">
-                                            1 Pelican Hill Rd N ,Newport Beach
-                                            <div class="list_item-cost">$55,000,000</div>
+                                            {{listItem.n}}
+                                            <div class="list_item-cost">{{listItem.c}}</div>
                                         </div>
                                     </div>
                                     <div class="list_item-image"></div>
@@ -39,37 +41,7 @@
                                 </div>
                                 <!-- /list_item -->
 
-                                <!-- list_item -->
-                                <div class="list_item">
-                                    <div class="list_item-meta clearfix">
-                                        <div class="list_item-number">2</div>
-                                        <div class="list_item-title">
-                                            Beverly Park Ln, Beverly Hills
-                                            <div class="list_item-cost">$55,000</div>
-                                        </div>
-                                    </div>
-                                    <div class="list_item-image"></div>
-                                    <div class="list_item-text">
-                                        Last sold in 2016 for $149,000,000, the insane Villa del Lago in Newport Beach is our most expensive home in California. Sitting on over 12 acres of exclusive real estate in Newport Beach makes this the largest estate in Orange County. With a private lake, enormous garage, and about every other convenience possible, this marble-everything, state-of-the-art villa tops the list at number 1.
-                                    </div>                                    
-                                </div>
-                                <!-- /list_item -->
-
-                                <!-- list_item -->
-                                <div class="list_item">
-                                    <div class="list_item-meta clearfix">
-                                        <div class="list_item-number">3</div>
-                                        <div class="list_item-title">
-                                            Beverly Park Ln, Beverly Hills
-                                            <div class="list_item-cost">$55,000</div>
-                                        </div>
-                                    </div>
-                                    <div class="list_item-image"></div>
-                                    <div class="list_item-text">
-                                        Last sold in 2016 for $149,000,000, the insane Villa del Lago in Newport Beach is our most expensive home in California. Sitting on over 12 acres of exclusive real estate in Newport Beach makes this the largest estate in Orange County. With a private lake, enormous garage, and about every other convenience possible, this marble-everything, state-of-the-art villa tops the list at number 1.
-                                    </div>                                    
-                                </div>
-                                <!-- /list_item -->
+                                
                             </div>
                         </div>
                     </div>
@@ -119,30 +91,33 @@
 </template>
 
 <script>
-/*
 import axios from 'axios';
 export default {
-    name: 'name',
+    name: 'list',
     data () {
         return {
-            name: name
+            list: []
         }
     },
     methods:{
-        getName: function (){
-            axios.get("http://52.15.54.43:8181/name/" + this.$route.params.name).then(response => {this.name = response.data})
+        getList: function (){
+            axios.get("http://localhost:8182/list/" + this.$route.params.listURL).then(response => {this.list = response.data});
         }, 
     },
     mounted: function () {
-        this.getName();
+        this.getList();
+    },
+    computed:{
+        orderedListItems: function () {
+            console.log(this.list.items);
+            return _.orderBy(this.list.items, 'o');
+        }
     }
+    
 }
-*/
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-    nav{
-        border-bottom:none;
-    }
+<style>
 </style>

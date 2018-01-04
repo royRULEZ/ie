@@ -249,7 +249,7 @@ nav{
             height: 400px;
             float: left;
             position: relative;
-            background: #EEE url('assets/images/test_photo.jpg');
+            //background: #EEE url('assets/images/test_photo.jpg');
             @include background-cover();
             &:before{
                 @extend .feature_img-gradient;
@@ -261,7 +261,7 @@ nav{
             height: 400px;
             float: left;
             position: relative;
-            background: #EEE url('assets/images/test_photo2.jpeg');
+            //background: #EEE url('assets/images/test_photo2.jpeg');
             @include background-cover();
             &:before{
                 @extend .feature_img-gradient;
@@ -273,7 +273,7 @@ nav{
             height: 400px;
             float: left; 
             position: relative;
-            background: #EEE url('assets/images/test_photo3.jpg');
+            //background: #EEE url('assets/images/test_photo3.jpg');
             @include background-cover();
             &:before{
                 @extend .feature_img-gradient;
@@ -386,7 +386,7 @@ nav{
                 height: 180px;
                 float:left;
                 position: relative;
-                background: #EEE url('assets/images/test_photo.jpg');
+                //background: #EEE url('assets/images/test_photo.jpg');
                 @include background-cover();    
             }
             .m_l_p_item-text{
@@ -464,7 +464,7 @@ nav{
                         height: 70px;
                         float:right;
                         position: relative;
-                        background: #EEE url('assets/images/test_photo.jpg');
+                        //background: #EEE url('assets/images/test_photo.jpg');
                         @include background-cover();    
                     }  
                     &:last-child{
@@ -547,7 +547,7 @@ nav{
                 width:100%;
                 height: 350px;
                 float: left;
-                background: #EEE url('assets/images/test_photo.jpg');
+                //background: #EEE url('assets/images/test_photo.jpg');
                 background-position: center;
                 background-size: cover;              
             }                                    
@@ -614,7 +614,7 @@ nav{
                             .list_item-image{
                                 width:100%;
                                 height: 300px;
-                                background: #EEE url('assets/images/1_1.jpg');
+                                //background: #EEE url('assets/images/1_1.jpg');
                                 background-position: center;
                                 background-size: cover; 
                             }
@@ -657,7 +657,7 @@ nav{
             .lsp_item-image{
                 width:75px;
                 height: 75px;
-                background: #EEE url('assets/images/test_photo.jpg');
+                //background: #EEE url('assets/images/test_photo.jpg');
                 background-position: center;
                 background-size: cover; 
                 float: left;
