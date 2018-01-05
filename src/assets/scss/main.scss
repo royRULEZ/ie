@@ -575,10 +575,24 @@ nav{
                         #list_list-intro{
                             font-weight: 500;
                             line-height: 1.6;
+                            a{
+                                text-decoration: underline;
+                            }
                         }
                         .list_item{
                             margin-top:50px;
                             border-top:1px solid #EDEDED;
+                            div.number1{
+                                background-color:$color-gold;
+                                color:$color-white;
+                                font-size:12px;
+                                text-transform: uppercase;
+                                padding: 12px;
+                                box-sizing: border-box;
+                                letter-spacing:5px;
+                                text-align: center;
+                                font-weight: 400;
+                            }                        
                             .list_item-meta{
                                 padding:15px 0;
                                 .list_item-number{
@@ -612,16 +626,18 @@ nav{
                                 
                             }
                             .list_item-image{
-                                width:100%;
-                                height: 300px;
-                                //background: #EEE url('assets/images/1_1.jpg');
-                                background-position: center;
-                                background-size: cover; 
+                                img{
+                                    width:100%;
+                                    height:300px;
+                                }
                             }
                             .list_item-text{
                                 margin-top:10px;
                                 font-weight: 500;
                                 line-height: 1.6;
+                                a{
+                                    text-decoration: underline;
+                                }
                             }
                         }
                     }  
